@@ -25,8 +25,11 @@
 
 
 ## Install
-
+    snap install wine-platform-runtime
+    snap install wine-platform-3-stable
     sudo snap install visualg-wine
+    snap connect visualg-wine:wine-runtime wine-platform-runtime
+    snap connect visualg-wine:wine-3-stable wine-platform-3-stable
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
