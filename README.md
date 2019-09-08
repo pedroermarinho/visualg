@@ -1,5 +1,6 @@
 
 
+#### Guardando revisão manual do VisualG Wine versão 3.0.7 (Em breve, estará disponível)
 # Creditos:
 
 ## VisualG
