@@ -14,7 +14,7 @@
   <br/>
   <br/>
   <br/>
-  <img src="visualg-wine.png.png" alt="GIMP">
+  <img src="visualg-wine.png" alt="VisualG Wine">
   <br/>
   VisualG Wine - O VisualG para Linux
   <br/>
