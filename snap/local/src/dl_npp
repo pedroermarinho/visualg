@@ -9,21 +9,6 @@
 # Date: Feb 11 2018
 #
 
-dlnpp () {
-    ver=$(wget https://notepad-plus-plus.org/download -q -S -O - 2>&1 | grep 'Version</t' | cut -c19-24 | sed 's| -||' | sed 's/ //g')
-    repover=$(echo $ver | cut -c01-1)
-    if [ "${ARCHITECTURE}" = "amd64" ]; then
-     wget https://notepad-plus-plus.org/repository/$repover.x/$ver/npp.$ver.Installer.x64.exe &> /dev/null
-     7z x -aos "npp.$ver.Installer.x64.exe" -x'!change.log' -x'!doLocalConf.xml' -x'!LICENSE' -x'!NppShell_06.dll' -x'!readme.txt' -x'!userDefinedLang-markdown.default.modern.xml' -o"usr/share/notepad-plus-plus"
-    elif [ "${ARCHITECTURE}" = "i386" ]; then
-     wget https://notepad-plus-plus.org/repository/$repover.x/$ver/npp.$ver.Installer.exe &> /dev/null
-     7z x -aos "npp.$ver.Installer.exe" -x'!change.log' -x'!doLocalConf.xml' -x'!LICENSE' -x'!NppShell_06.dll' -x'!readme.txt' -x'!userDefinedLang-markdown.default.modern.xml' -o"usr/share/notepad-plus-plus"
-    else
-     echo "ERROR! notepad-plus-plus only produces software for amd64 and i386. Failing the build here."
-     exit 1
-    fi
-}
-
 dli7z16 () {
     ARCHITECTURE=$(dpkg --print-architecture)
     if [ "${ARCHITECTURE}" = "amd64" ]; then
@@ -50,36 +35,31 @@ dli7z16 () {
 }
 
 mknpp () {
-    appdir="usr/share/notepad-plus-plus"
-    mkdir ./{wine-runtime,wine-platform,bin} && mkdir -p usr/share/{pixmaps,applications} && mkdir -p "winedata/Application Data/Notepad++" && mkdir -p "usr/share/notepad-plus-plus/plugins/Config"
-    mv $appdir/notepad++.exe $appdir/notepad-plus-plus.exe
-    cp -R $appdir/'$_14_'/* "winedata/Application Data/Notepad++";cp -R $appdir/'$_15_'/* "usr/share/notepad-plus-plus/plugins";cp -R $appdir/'$_17_'/* "usr/share/notepad-plus-plus/plugins/Config"
-    find $appdir/'$PLUGINSDIR' -type f -name '*.xml' -print0 | while read -d $'\0' file; do cp -v "$file" $appdir/localization/ &>/dev/null; done
-    rm -R $appdir/'$_14_';rm -R $appdir/'$_15_';rm -R $appdir/'$_17_';rm -R $appdir/'$PLUGINSDIR';
-    find "usr" -type d -execdir chmod 755 {} + && find "winedata" -type d -execdir chmod 755 "{}" +
+  
+    mkdir ./{wine-runtime,wine-platform,bin} && mkdir -p usr/share/{pixmaps,applications} 
+    find "usr" -type d -execdir chmod 755 {}  
 }
 
-mkdsk () {
-cat > notepad-plus-plus.desktop <<'EOF1'
-[Desktop Entry]
-Name=Notepad++
-GenericName=Text Editor
-Comment=Simple and free source code editor.
-Encoding=UTF-8
-Version=
-Type=Application
-Terminal=false
-Icon=${SNAP}/usr/share/pixmaps/notepad-plus-plus.png
-Exec=notepad-plus-plus %F
-StartupWMClass=notepad-plus-plus.exe
-Categories=Utility;TextEditor
-MimeType=text/plain;text/css;text/html;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-java;text/x-makefile;text/x-python;text/x-sh;application/x-wine-extension-ini;application/x-wine-extension-inf;
-EOF1
-sed -i -e 's|Version=|Version='"$ver"'|g' notepad-plus-plus.desktop
-}
+# mkdsk () {
+# cat > notepad-plus-plus.desktop <<'EOF1'
+# [Desktop Entry]
+# Name=Notepad++
+# GenericName=Text Editor
+# Comment=Simple and free source code editor.
+# Encoding=UTF-8
+# Version=
+# Type=Application
+# Terminal=false
+# Icon=${SNAP}/usr/share/pixmaps/notepad-plus-plus.png
+# Exec=notepad-plus-plus %F
+# StartupWMClass=notepad-plus-plus.exe
+# Categories=Utility;TextEditor
+# MimeType=text/plain;text/css;text/html;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-java;text/x-makefile;text/x-python;text/x-sh;application/x-wine-extension-ini;application/x-wine-extension-inf;
+# EOF1
+# sed -i -e 's|Version=|Version='"$ver"'|g' notepad-plus-plus.desktop
+# }
 
 dli7z16
-dlnpp
 mknpp
-mkdsk
-mv notepad-plus-plus bin && mv notepad-plus-plus.desktop usr/share/applications && mv notepad-plus-plus.png usr/share/pixmaps && cp -R -p {bin,usr,wine-runtime,wine-platform,winedata} $SNAPCRAFT_PART_INSTALL
+
+cp -R -p {bin,usr,wine-runtime,wine-platform} $SNAPCRAFT_PART_INSTALL

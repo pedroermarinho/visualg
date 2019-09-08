@@ -358,12 +358,27 @@ for arg; do
     fi
 done
 
+
+if [ -e "$SNAP_USER_DATA/visualg30.exe" ] ; then
+    echo "exe...ok"
+else
+    echo "exe...cp"
+    cp $SNAP/visualg30.exe $SNAP_USER_DATA
+fi
+
+if [ -e "$SNAP_USER_DATA/VISUALG30.INI" ] ; then
+    echo "INI...ok"
+else
+    echo "INI...cp"
+    cp $SNAP/VISUALG30.INI $SNAP_USER_DATA
+fi
+
 if [ "$1" == "winecfg" ] ; then
   wine winecfg
 else
 if [ -z "$1" ] ; then
-  wine "$progHome/$progBin"
+  wine "$SNAP_USER_DATA/visualg30.exe"
 else
-  wine start /unix "$progHome/$progBin" "${args[@]}"
+  wine start /unix $SNAP_USER_DATA/visualg30.exe
 fi
 fi
