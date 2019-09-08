@@ -20,7 +20,7 @@
   VisualG Wine - O VisualG para Linux
   <br/>
   <br/>
-  <br/>
+  <br/> 
 </h1>
 
 
@@ -32,7 +32,20 @@
     snap connect visualg-wine:wine-3-stable wine-platform-3-stable
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
-
+<br/>
+<br/>
+<br/>
+([Caso ainda não esteja disponivel na snap store baixe aqui!!!](https://github.com/pedroermarinho/visualg-wine/releases/download/v3.0.7/visualg-wine_3.0.7_amd64.snap))
+#### Comando de instalação
+## Install
+    
+    snap install wine-platform-runtime
+    snap install wine-platform-3-stable
+    sudo snap install --devmode --dangerous visualg-wine_3.0.7_amd64.snap
+    snap connect visualg-wine:wine-runtime wine-platform-runtime
+    snap connect visualg-wine:wine-3-stable wine-platform-3-stable
+    
+    
 <h1 align="center">
   <img src="screenshot.png" alt="GIMP">
 </h1>
