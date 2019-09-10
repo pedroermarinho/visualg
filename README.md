@@ -1,6 +1,6 @@
 
+[![Disponível na Snap Store](https://snapcraft.io/static/images/badges/pt/snap-store-black.svg)](https://snapcraft.io/visualg)
 
-#### Guardando revisão manual do VisualG Wine versão 3.0.7 (Em breve, estará disponível)
 # Creditos:
 
 ## VisualG
