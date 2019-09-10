@@ -42,8 +42,8 @@
     snap install wine-platform-runtime
     snap install wine-platform-3-stable
     sudo snap install --devmode --dangerous visualg-wine_3.0.7_amd64.snap
-    snap connect visualg-wine:wine-runtime wine-platform-runtime
-    snap connect visualg-wine:wine-3-stable wine-platform-3-stable
+    snap connect visualg:wine-runtime wine-platform-runtime
+    snap connect visualg:wine-3-stable wine-platform-3-stable
     
     
 <h1 align="center">
