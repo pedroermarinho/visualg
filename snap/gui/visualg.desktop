@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=VisualG
+Comment=Português Estruturado (Portugol)
+Icon=${SNAP}/visualg.png
+Exec=visualg
+Terminal=false
+Categories=Education;Utility;TextEditor
+Encoding=UTF-8

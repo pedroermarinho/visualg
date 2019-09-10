@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=VisualG Wine
-Comment=português estruturado (portugol)
-Icon=${SNAP}/visualg-wine.png
-Exec=visualg-wine
-Terminal=false
-Categories=Education;Utility;TextEditor
-Encoding=UTF-8

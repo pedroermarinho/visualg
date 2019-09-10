@@ -15,7 +15,7 @@
   <br/>
   <br/>
   <br/>
-  <img src="visualg-wine.png" alt="VisualG Wine">
+  <img src="visualg.png" alt="VisualG Wine">
   <br/>
   VisualG Wine - O VisualG para Linux
   <br/>
@@ -27,7 +27,7 @@
 ## Install
     snap install wine-platform-runtime
     snap install wine-platform-3-stable
-    sudo snap install visualg-wine
+    sudo snap install visualg
     snap connect visualg-wine:wine-runtime wine-platform-runtime
     snap connect visualg-wine:wine-3-stable wine-platform-3-stable
 
