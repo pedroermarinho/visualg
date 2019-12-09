@@ -1,54 +1,46 @@
 
-[![Disponível na Snap Store](https://snapcraft.io/static/images/badges/pt/snap-store-black.svg)](https://snapcraft.io/visualg)
-
-# Creditos:
-
-## VisualG
-([O melhor editor e interpretador de Algoritmos é do Brasil](http://visualg3.com.br/))
-
-
-## Snapcrafters
-### notepad-plus-plus
-([snap repo for notepad-plus-plus snap](https://github.com/pedroermarinho/notepad-plus-plus))
-
 <h1 align="center">
-  <br/>
-  <br/>
-  <br/>
-  <img src="visualg.png" alt="VisualG Wine">
-  <br/>
-  VisualG Wine - O VisualG para Linux
-  <br/>
-  <br/>
-  <br/> 
+  <img src="visualg.png"></img>
+  <br />
+  VisualG <a href="https://snapcraft.io/visualg"><br><img src="https://github.com/snapcore/snap-store-badges/raw/master/PT/%5BPT%5D-snap-store-black-uneditable%401x.png"></img></a>
 </h1>
 
 
-## Install
-    snap install wine-platform-runtime
-    snap install wine-platform-3-stable
-    sudo snap install visualg
-    snap connect visualg:wine-runtime wine-platform-runtime
-    snap connect visualg:wine-3-stable wine-platform-3-stable
+## O que é o VisualG?
 
-([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
-<br/>
-<br/>
-<br/>
-([Caso ainda não esteja disponivel na snap store baixe aqui!!!](https://github.com/pedroermarinho/visualg-wine/releases/download/v3.0.7/visualg-wine_3.0.7_amd64.snap))
-#### Comando de instalação
-## Install
-    
-    snap install wine-platform-runtime
-    snap install wine-platform-3-stable
-    sudo snap install --devmode --dangerous visualg-wine_3.0.7_amd64.snap
-    snap connect visualg:wine-runtime wine-platform-runtime
-    snap connect visualg:wine-3-stable wine-platform-3-stable
-    
-    
+O Visualg é um programa que permite criar, editar, interpretar e que também executa os algoritmos em português estruturado (portugol) como se fosse um “programa” normal de computador.
+
+É um programa de livre uso e distribuição GRÁTIS, e DOMÍNIO PÚBLICO, usado para o  ensino de lógica de programação em várias escolas e universidades no Brasil e no exterior.
+
+## Quais são os requisitos para instalar?
+* [snapd](https://snapcraft.io/docs/core/install)
+
+## Como instalar?
+```
+  snap install wine-platform-runtime
+  snap install wine-platform-3-stable
+  sudo snap install visualg
+  sudo snap connect visualg:wine-runtime wine-platform-runtime
+  sudo snap connect visualg:wine-3-stable wine-platform-3-stable
+```
+
+## Capturas de tela:
+
 <h1 align="center">
-  <img src="screenshot.png" alt="GIMP">
+  <img src="screenshot.png" width=75%></img>
 </h1>
-<h1 align="center">
-  <img src="screenshot2.png" alt="GIMP">
+<h2 align="center">
+  <img src="screenshot2.png" width=75%></img>
 </h1>
+
+## Corrigir os espaços da fonte
+O VisualG usa a fonte Courier New que não pode ser redistribuída com projetos, por causa disso a fonte fica o espaçamento fixo forçado, para corrigir basta baixar a fonte Courier New e colocar em `.fonts` na sua Pasta Pessoal
+
+## Créditos:
+
+* [Criadores do VisualG](http://visualg3.com.br/)
+
+* [Snapcrafters do Notepad++](https://github.com/pedroermarinho/notepad-plus-plus)
+
+
+
