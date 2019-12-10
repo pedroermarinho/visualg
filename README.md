@@ -17,14 +17,12 @@ O Visualg é um programa que permite criar, editar, interpretar e que também ex
 
 ## Como instalar?
 ```
-  snap install wine-platform-runtime
-  snap install wine-platform-3-stable
   sudo snap install visualg
   sudo snap connect visualg:wine-runtime wine-platform-runtime
   sudo snap connect visualg:wine-3-stable wine-platform-3-stable
 ```
 
-## Capturas de tela:
+## Capturas de tela:sudo snap connect visualg:wine-3-stable wine-platform-3-stable
 
 <h1 align="center">
   <img src="screenshot.png" width=75%></img>
