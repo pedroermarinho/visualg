@@ -22,7 +22,7 @@ O Visualg é um programa que permite criar, editar, interpretar e que também ex
   sudo snap connect visualg:wine-3-stable wine-platform-3-stable
 ```
 
-## Capturas de tela:sudo snap connect visualg:wine-3-stable wine-platform-3-stable
+## Capturas de tela:
 
 <h1 align="center">
   <img src="screenshot.png" width=75%></img>
