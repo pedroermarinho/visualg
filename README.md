@@ -1,8 +1,8 @@
 
 <h1 align="center">
-  <img src="visualg.png"></img>
-  <br />
-  VisualG <a href="https://snapcraft.io/visualg"><br><img src="https://github.com/snapcore/snap-store-badges/raw/master/PT/%5BPT%5D-snap-store-black-uneditable%401x.png"></img></a>
+  <img src="visualg.png">
+  <br/>
+  VisualG <br/> <a href="https://snapcraft.io/visualg"> <br/> <img src="https://github.com/snapcore/snap-store-badges/raw/master/PT/%5BPT%5D-snap-store-black-uneditable%401x.png"></a>
 </h1>
 
 
@@ -25,10 +25,10 @@ O Visualg é um programa que permite criar, editar, interpretar e que também ex
 ## Capturas de tela:
 
 <h1 align="center">
-  <img src="screenshot.png" width=75%></img>
+<img src="screenshot.png" width=75%>
 </h1>
 <h2 align="center">
-  <img src="screenshot2.png" width=75%></img>
+<img src="screenshot2.png" width=75%>
 </h1>
 
 ## Corrigir os espaços da fonte
