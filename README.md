@@ -23,13 +23,12 @@ O Visualg é um programa que permite criar, editar, interpretar e que também ex
 ```
 
 ## Capturas de tela
-
-<h1 align="center">
-<img src="screenshot.png" width=75%>
-</h1>
-<h2 align="center">
+<p align="center">
+<img src="screenshot.png" width=75% >
+</p>
+<p align="center">
 <img src="screenshot2.png" width=75%>
-</h2>
+</p>
 
 ## Corrigir os espaços da fonte
 O VisualG usa a fonte Courier New que não pode ser redistribuída com projetos, por causa disso a fonte fica o espaçamento fixo forçado, para corrigir basta baixar a fonte Courier New e colocar em `.fonts` na sua Pasta Pessoal
