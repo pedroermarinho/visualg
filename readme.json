@@ -1,0 +1,50 @@
+{
+  "project_name": "visualg",
+  "version": "3.0.7",
+  "description": "O Visualg é um programa que permite criar, editar, interpretar e que também executa os algoritmos em português estruturado (portugol) como se fosse um “programa” normal de computador.",
+  "author": "Pedro Marinho",
+  "icon_src": "visualg.png",
+  "snap_store_name": "visualg",
+  "screenshot_src": ["screenshot.png","screenshot2.png"],
+  "github_username": "pedroermarinho",
+  "author_linkedin_username": "pedroermarinho",
+  "author_twitter_username": "pedroermarinho",
+  "author_website": "https://pedroermarinho.github.io/",
+  "homepage": "https://github.com/pedroermarinho/visualg#readme",
+  "project_demo_url": "https://github.com/pedroermarinho/visualg#readme",
+  "repository_url": "https://github.com/pedroermarinho/visualg",
+  "contributing_url": "https://github.com/pedroermarinho/visualg/blob/master/CONTRIBUTING.md",
+  "documentation_url": "https://github.com/pedroermarinho/visualg#readme",
+  "license_url": "https://github.com/pedroermarinho/visualg/blob/master/LICENSE",
+  "issues_url": "https://github.com/pedroermarinho/visualg/issues",
+  "license": "MIT",
+  "install_command": [
+    "sudo snap install visualg",
+    "sudo snap connect visualg:wine-runtime wine-platform-runtime",
+    "sudo snap connect visualg:wine-3-stable wine-platform-3-stable"
+  ],
+  "usage_command": ["visualg"],
+  "test_command": null,
+
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pedroermarinho/visualg.git"
+  },
+  "credits": [
+    {
+      "name": "VisualG",
+      "url": "http://visualg3.com.br/"
+    },
+    {
+      "name": "Snapcrafters do Notepad++",
+      "url": "https://github.com/pedroermarinho/notepad-plus-plus"
+    }
+  ],
+  "keywords": [
+
+  ],
+
+  "is_github_repos": true,
+  "has_start_command": true,
+  "has_test_command": false
+}
